@@ -23,10 +23,10 @@ public class Player extends Creature
     {
         if (healingFactor > 0)
         {
-            if (this.getHealth() >= this.getMaxHealth() / 2) throw new MeaninglessHealingException();
+            if (this.getHealth() == this.getMaxHealth()) throw new MeaninglessHealingException();
 
             healingFactor--;
-            this.setHealth(this.getMaxHealth() / 2);
+            this.setHealth(Math.min(this.getMaxHealth() / 2 + this.getMaxHealth(), this.getMaxHealth()));
 
             System.out.println("Your healing factor now is " + healingFactor);
             System.out.println("Your health now is " + this.getHealth());

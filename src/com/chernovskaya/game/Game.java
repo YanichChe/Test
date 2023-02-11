@@ -99,7 +99,7 @@ public class Game
         }
 
         if (monster.isAlive()) System.out.println("The monster won");
-        else System.out.println(player.getName() + "won");
+        else System.out.println(player.getName() + " won");
     }
 
     private void printStartInfo()
